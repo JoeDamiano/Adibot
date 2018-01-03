@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8"/>
+      <title>Adibot</title>
+      <meta name="description" content="Description Here"/>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="style.css" rel="stylesheet">
+    </head>
+    <body>        
+        <div class="half-width full-height left">
+          <h4>New Tasks</h4>
+          <label>Proxies</label>
+          <textarea id="proxies" class="input input-proxies"></textarea>
+          <label class="input full-width">Url</label>
+          <input type="text" id="splashUrlBruteforce" class="input full-width">
+          <label class="input full-width">Tasks Per Proxy</label>
+          <input class="left" type="number" value="1" min="1" id="tpp" required>
+          <button class="right" type="button" id="addBruteforce">Add</button>
+          <label class= "input full-width">Sizes</label>
+          <select multiple class="input input-sizes right" id="sizes">
+            <option>5</option>
+            <option>5.5</option>
+            <option>6</option>
+            <option>6.5</option>
+            <option>7</option>
+            <option>7.5</option>
+            <option selected="selected">8</option>
+            <option selected="selected">8.5</option>
+            <option selected="selected">9</option>
+            <option selected="selected">9.5</option>
+            <option selected="selected">10</option>
+            <option selected="selected">10.5</option>
+            <option selected="selected">11</option>
+            <option selected="selected">11.5</option>
+            <option selected="selected">12</option>
+            <option>12.5</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+          </select>
+        </div>
+        <div class="half-width full-height right">
+          <div class="scroll-table">
+            <table>
+                <thead>
+                                    <tr>
+                        <th><a href="#">ID</a></th>
+                        <th><a href="#">Status</a></th>
+                        <th><a href="#">Proxy</a></th>
+                        <th><a href="#">Action</a></th>
+                    </tr>
+                </thead>
+              <tbody id="bruteforceTasks">
+
+              </tbody>
+            </table>
+        </div>        
+        <button type="button" id="removeAllBruteTasks">Remove All</button>
+      </div>
+      <script>
+      window.$ = window.jQuery = require('jquery');
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+    </body>
+</html>
